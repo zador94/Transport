@@ -8,7 +8,20 @@ $transportPark->addVehicle($truck1);
 $transportPark->addVehicle($automobile1);
 $transportPark->addVehicle($bus1);
 
+foreach ($transportPark->getListVehicle() as $item)
+{
+    echo 'Модель: '. $item->getModel() . '<br>';
+    echo 'Максимальная скорость: '. $item->getMaxSpeed() . '<br>';
+    echo 'Количество колес: '. $item->getQuantityWheels() . '<br>';
+    echo '------------------------<br>';
+}
+
 $transportPark->removeVehicle('Suzuki');
 
-
-var_dump($transportPark);
+foreach ($transportPark->getListVehicle() as $item)
+{
+    echo 'Модель: '. $item->getModel() . '<br>';
+    echo 'Максимальная скорость: '. $item->getMaxSpeed() . '<br>';
+    echo 'Количество колес: '. $item->getQuantityWheels() . '<br>';
+    echo '------------------------<br>';
+}
